@@ -2,6 +2,9 @@
 
 作品：**Form & Field — Objects for a slower everyday**
 
+在线演示：https://ming0429.github.io/form-and-field/  
+公开源码：https://github.com/Ming0429/form-and-field
+
 ## 已完成
 
 - React + TypeScript 原创英文商品选购应用，10 个模拟商品、4 个分类。
@@ -17,6 +20,7 @@
 - `npm run build`：TypeScript 检查和 Vite 生产构建通过。
 - Chromium 验证搜索 / 筛选 / 排序 / 收藏 / 加购 / 修改数量 / 删除 / 运费阈值 / 刷新恢复 / 缺货状态 / 手机筛选。
 - 320、375、390、768、1024、1440px 无横向溢出；本地商品图片均加载成功；未发现页面异常与控制台错误。
+- GitHub Pages 公开 HTTPS 页面已使用同一套 Chromium 端到端测试复验通过，记录见 `docs/verification-public.json`。
 - 未进行真实设备与多浏览器全面兼容测试。
 
 ## 主要取舍与边界
@@ -25,7 +29,7 @@
 
 代码按 `data / lib / hooks / components / styles` 分类：纯业务逻辑与视图分离；Modal、Icon、QuantityControl、FilterControls 为公共组件；购物车持久化由 Hook 统一管理，可继续替换为后端服务。
 
-线上部署为可选项。腾讯云 SSH 认证未通过后按要求停止，未修改服务器。README 提供静态子目录部署说明。
+源码已公开发布到 GitHub，生产构建通过 `gh-pages` 分支交付 GitHub Pages。腾讯云 SSH 认证未通过后按要求停止，未修改服务器。README 提供运行、架构、测试与部署说明。
 
 ## 启动
 

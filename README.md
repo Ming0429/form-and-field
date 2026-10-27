@@ -4,6 +4,9 @@
 
 核心流程：**浏览商品 → 搜索 / 分类筛选 → 查看详情 → 加入购物车 → 调整数量 → 查看订单预览**。支持电脑、平板和手机。
 
+在线演示：[GitHub Pages](https://ming0429.github.io/form-and-field/)  
+公开源码：[Ming0429/form-and-field](https://github.com/Ming0429/form-and-field)
+
 ## 1. 本地运行
 
 环境：Node.js **22.12 或更新版本**，npm。已在 Node.js 22.22.2 下验证。
@@ -130,7 +133,9 @@ BASE_URL=http://127.0.0.1:4173/ npm run test:e2e
 
 已验证的重点场景：搜索与空结果恢复、组合筛选、价格排序、收藏、详情加购、金额 / 运费切换、数量上限、缺货禁用、删除及空购物车、刷新恢复、损坏缓存恢复、本地图片加载、电脑及手机交互。响应式检查覆盖 320、375、390、768、1024、1440px，没有发现横向溢出。浏览器验收未发现页面异常或 console error。
 
-验证范围是本机 Chromium；未声称完成 Safari / Firefox / 真实 iPhone 全兼容测试。
+同一套端到端测试已对公开 HTTPS 地址 `https://ming0429.github.io/form-and-field/` 再次运行通过；记录见 `docs/verification-public.json`。
+
+验证浏览器为本机 Chromium，覆盖本地生产预览和公开站点；未声称完成 Safari / Firefox / 真实 iPhone 全兼容测试。
 
 ## 6. 演示视频
 
@@ -156,7 +161,9 @@ npm run build
 
 将 **dist 目录内的文件** 上传到静态站点的新子目录即可。例如现有 Nginx 静态根下 `/form-and-field/`，访问地址应以 `/` 结尾。部署无需后端进程、数据库或密钥。
 
-本次优先完成本地交付。腾讯云 SSH 认证未通过后，按要求停止连接，**没有修改线上站点或网关，也未声称已部署**。
+本项目已将源码发布到 GitHub 的 `main` 分支，将已验证的 `dist/` 内容发布到 `gh-pages` 分支根目录；包含 `.nojekyll`，由 GitHub Pages 提供 HTTPS 静态托管。后续修改需要重新构建并更新 `gh-pages`，源码提交不会自动更新演示站点。
+
+腾讯云 SSH 认证未通过后已按要求停止连接，没有修改腾讯云站点或网关。
 
 ## 8. 已知边界
 

@@ -1,0 +1,14 @@
+{
+  "baseURL": "https://ming0429.github.io/form-and-field/",
+  "passed": [
+    "Desktop catalog loads with 10 products and no horizontal overflow",
+    "Search, no-results reset, category filter and price sorting",
+    "Favorites, detail quantities, cart totals, free shipping, demo review, Escape, persistence and empty cart",
+    "Stock ceiling and sold-out product cannot be added",
+    "Mobile filter drawer, stock filter, cart interaction; no overflow at 320/375/390/768/1024/1440px",
+    "Corrupt persisted cart recovers safely",
+    "All 10 local product images decode successfully"
+  ],
+  "errors": [],
+  "timestamp": "2026-10-27T08:16:20.997Z"
+}
